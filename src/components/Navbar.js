@@ -1,49 +1,43 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
+import { motion } from "framer-motion"
+import { useInView } from "react-intersection-observer"
+import { FaHome, FaShoppingCart, FaBook, FaPhoneAlt } from "react-icons/fa"
 import "./Navbar.css"
 import logo from "../logo.jpg"
 
 const Navbar = () => {
-  const [sticky, setSticky] = useState(false)
-
-  const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setSticky(true)
-    } else {
-      setSticky(false)
-    }
-  }
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+  const { ref, inView } = useInView({ triggerOnce: true })
 
   return (
-    <nav className={`navbar ${sticky ? "sticky" : ""}`}>
+    <motion.nav ref={ref} className="navbar" initial={{ y: -100, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : {}} transition={{ type: "spring", stiffness: 50, duration: 0.8 }}>
       <div className="navbar-logo">
-        <img src={logo} alt="Logo" />
+        <a href="/">
+          <motion.img src={logo} alt="Henna & Organic Care Logo" className="navbar-logo-img" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3, duration: 0.8 }} />
+        </a>
       </div>
       <ul className="navbar-links">
-        <li>
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#shop">Shop</a>
-        </li>
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
-        <li>
-          <a href="/courses">Courses</a>
-        </li>
+        <motion.li whileHover={{ scale: 1.1 }} transition={{ duration: 0.2 }}>
+          <a href="#home">
+            <FaHome className="navbar-icon" /> Home
+          </a>
+        </motion.li>
+        <motion.li whileHover={{ scale: 1.1 }} transition={{ duration: 0.2 }}>
+          <a href="/shop">
+            <FaShoppingCart className="navbar-icon" /> Shop
+          </a>
+        </motion.li>
+        <motion.li whileHover={{ scale: 1.1 }} transition={{ duration: 0.2 }}>
+          <a href="#courses">
+            <FaBook className="navbar-icon" /> Courses
+          </a>
+        </motion.li>
+        <motion.li whileHover={{ scale: 1.1 }} transition={{ duration: 0.2 }}>
+          <a href="#contact">
+            <FaPhoneAlt className="navbar-icon" /> Contact
+          </a>
+        </motion.li>
       </ul>
-      <button className="navbar-button">Shop Now</button>
-    </nav>
+    </motion.nav>
   )
 }
 

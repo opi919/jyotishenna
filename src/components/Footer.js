@@ -1,17 +1,23 @@
 import React from "react"
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa"
+import { FaFacebookF, FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa"
+import { motion } from "framer-motion"
+import { useInView } from "react-intersection-observer"
+import logo from "../logo.jpg"
 import "./Footer.css"
-import logo from "../logo.jpg" // Assuming you have saved your logo here
 
 const Footer = () => {
+  const { ref, inView } = useInView({ triggerOnce: true })
+
   return (
-    <footer className="footer">
+    <motion.footer ref={ref} className="footer" initial={{ opacity: 0, y: 100 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8 }}>
       <div className="footer-container">
+        {/* Logo Section */}
         <div className="footer-logo-section">
-          <img src={logo} alt="Henna & Organic Care Logo" className="footer-logo" />
-          <p className="footer-tagline">Embrace the beauty of nature with organic henna and natural care. Join our community today!</p>
+          <motion.img src={logo} alt="Henna & Organic Care Logo" className="footer-logo" initial={{ scale: 0.9, opacity: 0 }} animate={inView ? { scale: 1, opacity: 1 } : {}} transition={{ duration: 0.6 }} />
+          <p className="footer-tagline">Embrace the beauty of nature with organic henna and natural care.</p>
         </div>
 
+        {/* Other Sections */}
         <div className="footer-links">
           <h3>Explore</h3>
           <ul>
@@ -29,27 +35,29 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-
+        {/* Social Icons Section */}
         <div className="footer-social">
           <h3>Follow Us</h3>
           <div className="social-icons">
-            <a href="https://facebook.com" className="icon">
+            <motion.a href="https://facebook.com" className="icon" whileHover={{ scale: 1.1 }}>
               <FaFacebookF />
-            </a>
-            <a href="https://instagram.com" className="icon">
+            </motion.a>
+            <motion.a href="https://instagram.com" className="icon" whileHover={{ scale: 1.1 }}>
               <FaInstagram />
-            </a>
-            <a href="https://twitter.com" className="icon">
+            </motion.a>
+            <motion.a href="https://twitter.com" className="icon" whileHover={{ scale: 1.1 }}>
               <FaTwitter />
-            </a>
+            </motion.a>
+            <motion.a href="mailto:info@hennaorganiccare.com" className="icon" whileHover={{ scale: 1.1 }}>
+              <FaEnvelope />
+            </motion.a>
           </div>
         </div>
       </div>
-
       <div className="footer-bottom">
         <p>&copy; 2024 Henna & Organic Care. All rights reserved.</p>
       </div>
-    </footer>
+    </motion.footer>
   )
 }
 

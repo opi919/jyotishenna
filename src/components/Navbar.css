@@ -2,12 +2,14 @@
 .navbar {
   position: sticky;
   top: 0;
-  background: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #38a169;
+  background-size: 200% 200%;
+  /* animation: smokyGradient 8s ease infinite; */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 100;
   transition: all 0.3s ease;
 }
@@ -31,14 +33,13 @@
 }
 
 .navbar-links a {
-  color: #34a853;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .navbar-links a:hover {
-  color: #68b96a; /* Slight color change on hover */
-  border-bottom: 2px solid #68b96a; /* Underline on hover */
+  border-bottom: 2px solid #ffffff; /* Underline on hover */
 }
 
 /* Navbar Button Styles */
@@ -79,5 +80,17 @@
 
   .navbar-button {
     margin-top: 1rem;
+  }
+}
+
+@keyframes smokyGradient {
+  0% {
+    background-position: 0% 100%;
+  }
+  50% {
+    background-position: 100% 80%;
+  }
+  100% {
+    background-position: 0% 100%;
   }
 }

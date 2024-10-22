@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kablammo&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -5,4 +8,9 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal overflow */
+  font-family: "Playwrite GB S", sans-serif;
+}
+
+button {
+  font-family: "Playwrite GB S", sans-serif;
 }
