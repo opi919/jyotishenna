@@ -19,7 +19,7 @@ const ShopPage = () => {
         Our Organic Henna Products
       </motion.h1>
 
-      <div className="products-grid">
+      <div className="products-grid" style={{ marginTop: "4rem" }}>
         <motion.div className="product-card" variants={cardVariants} initial="hidden" animate={shopInView ? "visible" : "hidden"} whileHover="hover">
           <img src="/assets/henna-art.jpg" alt="Henna Powder" />
           <h3>Henna Powder</h3>

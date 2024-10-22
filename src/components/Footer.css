@@ -13,7 +13,7 @@
   padding: 2rem;
   background: linear-gradient(90deg, #38a169, #716464, #2b6cb0);
   background-size: 200% 200%;
-  animation: smokyGradient 8s ease infinite;
+  animation: smokyGradient 20s ease infinite;
   color: white;
   text-align: center;
   box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);

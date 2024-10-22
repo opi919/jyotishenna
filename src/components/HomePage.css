@@ -137,6 +137,12 @@
 }
 
 @media (max-width: 480px) {
+  .home-container {
+    padding: 0;
+  }
+  .shop-title {
+    padding: 2rem 1rem !important;
+  }
   .hero-title {
     font-size: 1.5rem; /* Further smaller title for very small screens */
   }

@@ -7,6 +7,7 @@ import CoursesPage from "./components/CoursesPage"
 import ContactPage from "./components/ContactPage"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
+import Gallery from "./components/Gallery"
 import "./App.css"
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/shop" element={<ShopPage />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/courses" element={<CoursesPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>

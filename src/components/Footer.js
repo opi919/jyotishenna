@@ -1,5 +1,5 @@
 import React from "react"
-import { FaFacebookF, FaInstagram, FaTwitter, FaEnvelope } from "react-icons/fa"
+import { FaFacebookF, FaInstagram, FaYoutube, FaEnvelope } from "react-icons/fa"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 import logo from "../logo.jpg"
@@ -48,7 +48,7 @@ const Footer = () => {
               <FaInstagram />
             </motion.a>
             <motion.a href="https://twitter.com" className="icon" whileHover={{ scale: 1.1 }}>
-              <FaTwitter />
+              <FaYoutube />
             </motion.a>
             <motion.a href="mailto:info@hennaorganiccare.com" className="icon" whileHover={{ scale: 1.1 }}>
               <FaEnvelope />

@@ -1,0 +1,11 @@
+.MuiPaper-root {
+  display: none;
+  background: linear-gradient(120deg, #e0ffe0, #f9f9f9);
+}
+.MuiBox-root {
+  padding: 3rem 0;
+}
+
+.gallery {
+  background: linear-gradient(120deg, #e0ffe0, #f9f9f9);
+}

@@ -9,6 +9,7 @@ body {
   padding: 0;
   overflow-x: hidden; /* Prevent horizontal overflow */
   font-family: "Playwrite GB S", sans-serif;
+  background: linear-gradient(120deg, #e0ffe0, #f9f9f9);
 }
 
 button {

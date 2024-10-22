@@ -6,7 +6,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #38a169;
+  background: linear-gradient(90deg, #38a169, #716464, #2b6cb0);
+  background-size: 200% 200%;
+  animation: smokyGradient 20s ease infinite;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 100;
   transition: all 0.3s ease;
@@ -185,7 +187,7 @@
 
 @keyframes smokyGradient {
   0% {
-    background-position: 0% 100%;
+    background-position: 0% 120%;
   }
   50% {
     background-position: 100% 80%;

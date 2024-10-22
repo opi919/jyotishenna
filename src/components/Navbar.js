@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
-import { FaHome, FaShoppingCart, FaBook, FaPhoneAlt } from "react-icons/fa"
+import { FaHome, FaShoppingCart, FaBook, FaPhoneAlt, FaImages } from "react-icons/fa"
 import "./Navbar.css"
 import logo from "../logo.jpg"
 
@@ -22,7 +22,7 @@ const Navbar = () => {
       </div>
       <ul className={`navbar-links ${isOpen ? "active" : ""}`}>
         <motion.li whileHover={{ scale: 1.1 }} transition={{ duration: 0.2 }}>
-          <a href="#home">
+          <a href="/">
             <FaHome className="navbar-icon" /> Home
           </a>
         </motion.li>
@@ -32,12 +32,17 @@ const Navbar = () => {
           </a>
         </motion.li>
         <motion.li whileHover={{ scale: 1.1 }} transition={{ duration: 0.2 }}>
-          <a href="#courses">
+          <a href="/gallery">
+            <FaImages className="navbar-icon" /> Gallery
+          </a>
+        </motion.li>
+        <motion.li whileHover={{ scale: 1.1 }} transition={{ duration: 0.2 }}>
+          <a href="/courses">
             <FaBook className="navbar-icon" /> Courses
           </a>
         </motion.li>
         <motion.li whileHover={{ scale: 1.1 }} transition={{ duration: 0.2 }}>
-          <a href="#contact">
+          <a href="/contact">
             <FaPhoneAlt className="navbar-icon" /> Contact
           </a>
         </motion.li>
@@ -56,6 +61,9 @@ const Navbar = () => {
           </li>
           <li>
             <a href="/shop">Shop</a>
+          </li>
+          <li>
+            <a href="/gallery">Gallery</a>
           </li>
           <li>
             <a href="/courses">Courses</a>
