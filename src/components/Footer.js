@@ -41,16 +41,16 @@ const Footer = () => {
         <div className="footer-social">
           <h3>Follow Us</h3>
           <div className="social-icons">
-            <motion.a href="https://facebook.com" className="icon" whileHover={{ scale: 1.1 }}>
+            <motion.a href="https://www.facebook.com/hennaandorganiccare" className="icon" whileHover={{ scale: 1.1 }}>
               <FaFacebookF />
             </motion.a>
-            <motion.a href="https://instagram.com" className="icon" whileHover={{ scale: 1.1 }}>
+            <motion.a href="https://www.instagram.com/hennaandorganiccare/" className="icon" whileHover={{ scale: 1.1 }}>
               <FaInstagram />
             </motion.a>
-            <motion.a href="https://twitter.com" className="icon" whileHover={{ scale: 1.1 }}>
+            <motion.a href="https://www.youtube.com/@Hennaandorganiccare" className="icon" whileHover={{ scale: 1.1 }}>
               <FaYoutube />
             </motion.a>
-            <motion.a href="mailto:info@hennaorganiccare.com" className="icon" whileHover={{ scale: 1.1 }}>
+            <motion.a href="mailto:esratjahanjyoti66@gmail.com" className="icon" whileHover={{ scale: 1.1 }}>
               <FaEnvelope />
             </motion.a>
           </div>
