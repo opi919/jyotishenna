@@ -41,14 +41,6 @@
   border-bottom: 2px solid #ffffff; /* Underline on hover */
 }
 
-/* Toggle Button for Hamburger Menu */
-.navbar-toggle {
-  display: none;
-  cursor: pointer;
-  font-size: 2rem;
-  color: #ffffff;
-}
-
 /* Overlay Styles */
 .overlay {
   position: fixed;
@@ -133,6 +125,12 @@
 }
 
 /* Responsive Mobile View */
+/* Toggle Button for Hamburger Menu */
+.navbar-toggle {
+  display: none; /* Hide toggle button by default */
+}
+
+/* Responsive Mobile View */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: row;
@@ -144,7 +142,34 @@
   }
 
   .navbar-toggle {
-    display: block; /* Show toggle button */
+    display: block; /* Show toggle button only in mobile view */
+  }
+
+  .menu {
+    display: none; /* Hide menu by default */
+  }
+
+  .menu.active {
+    display: flex; /* Show menu when active */
+    margin: 0;
+    padding: 2rem 0.5rem;
+    border-top: 1px solid white;
+  }
+}
+
+/* Ensure the burger icon is only visible on mobile */
+.burger {
+  display: none; /* Hide burger by default */
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex; /* Show burger menu only on mobile */
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
   }
 }
 
