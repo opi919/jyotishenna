@@ -1,0 +1,89 @@
+/* ShopPage background animation */
+.shop-page {
+  background: linear-gradient(120deg, #e0ffe0, #f9f9f9);
+  background-size: 400% 400%;
+  animation: backgroundAnimate 10s ease infinite; /* Smooth infinite animation */
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Background animation keyframes */
+@keyframes backgroundAnimate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.shop-title {
+  color: #34a853;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Grid Layout for Products */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Product Card Styles */
+.product-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  max-width: 300px;
+  text-align: center;
+}
+
+/* Product Image */
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Product Title */
+.product-card h3 {
+  font-size: 1.5rem;
+  color: #34a853;
+  margin-bottom: 1rem;
+}
+
+/* Product Description */
+.product-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Enhanced Buy Button */
+.buy-button {
+  background: linear-gradient(90deg, #34a853 0%, #68b96a 100%);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px; /* Rounded for modern look */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Glow and scale on hover */
+.buy-button:hover {
+  background: linear-gradient(90deg, #68b96a 0%, #34a853 100%);
+  box-shadow: 0 8px 20px rgba(0, 255, 0, 0.5); /* Green glow */
+  transform: scale(1.05); /* Slightly increase size */
+}
