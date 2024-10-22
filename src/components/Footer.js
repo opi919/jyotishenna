@@ -13,7 +13,9 @@ const Footer = () => {
       <div className="footer-container">
         {/* Logo Section */}
         <div className="footer-logo-section">
-          <motion.img src={logo} alt="Henna & Organic Care Logo" className="footer-logo" initial={{ scale: 0.9, opacity: 0 }} animate={inView ? { scale: 1, opacity: 1 } : {}} transition={{ duration: 0.6 }} />
+          <a href="/">
+            <motion.img src={logo} alt="Henna & Organic Care Logo" className="footer-logo" initial={{ scale: 0.9, opacity: 0 }} animate={inView ? { scale: 1, opacity: 1 } : {}} transition={{ duration: 0.6 }} />
+          </a>
           <p className="footer-tagline">Embrace the beauty of nature with organic henna and natural care.</p>
         </div>
 

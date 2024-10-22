@@ -23,14 +23,15 @@
   margin: 1rem 0;
 }
 
-/* CTA Buttons */
 .cta-buttons {
   display: flex;
   justify-content: center;
   gap: 1rem;
+  flex-direction: row; /* Default to row for larger screens */
 }
 
 .cta-button {
+  font-family: "Playwrite GB S", sans-serif;
   background: linear-gradient(90deg, #34a853 0%, #68b96a 100%);
   color: white;
   border: none;
@@ -39,6 +40,8 @@
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 300;
 }
 
 /* Featured Products */
@@ -48,7 +51,7 @@
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted min width */
   gap: 2rem;
 }
 
@@ -75,7 +78,7 @@
 
 .videos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted min width */
   gap: 2rem;
 }
 
@@ -93,7 +96,60 @@
   height: 200px; /* Set height as needed */
 }
 
+/* Spacing */
 .py-5 {
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.8rem; /* Slightly smaller title for mobile */
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem; /* Slightly smaller subtitle for mobile */
+  }
+
+  .cta-button {
+    padding: 10px 20px; /* Smaller button padding for mobile */
+    font-size: 0.9rem; /* Smaller button text for mobile */
+  }
+
+  .product-card {
+    padding: 1rem; /* Reduced padding in product cards */
+  }
+
+  .video-card iframe {
+    height: 150px; /* Reduced height for mobile */
+  }
+  .cta-buttons {
+    margin-top: 3rem;
+    flex-direction: column; /* Stack buttons in a column */
+    align-items: center; /* Center the buttons */
+  }
+
+  .cta-button {
+    width: 100%;
+    max-width: 8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.5rem; /* Further smaller title for very small screens */
+  }
+
+  .hero-subtitle {
+    font-size: 1rem; /* Further smaller subtitle for very small screens */
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+  }
+
+  .videos-grid {
+    grid-template-columns: 1fr; /* Single column layout for mobile */
+  }
 }
